@@ -1,0 +1,152 @@
+
+---
+# title: "DATA 607 WEEK 9 ASSIGNMENT <br /> WORKING WITH NEW YORK TIMES WEB API AND JSON IN R"
+# author: "[Kleber Perez - `r format(Sys.Date(), '%B %d, %Y')`](https://www.linkedin.com/in/kleberperez/)"
+output: 
+  html_document:
+    code_folding: show
+    theme: readable
+    highlight: pygments
+    css: ./w9css.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# 1. Library
+library(kableExtra)
+library(dplyr)
+library(RCurl)
+library(rjson)
+library(RJSONIO)
+library(jsonlite)
+
+library(httr)
+library(stringr)
+library(ggplot2)
+
+```
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="btn btn-default btn-block">
+  <br />
+  
+  <p><a class="label label-info" href="https://www.linkedin.com/in/kleberperez/" target="_blank" role="button">KLEBER PEREZ</a></p>
+  <p class="lead">DATA 607 WEEK 9 ASSIGNMENT <br />WORKING WITH NEW YORK TIMES WEB API AND JSON IN R <br />
+  SOURCE FILES AND RMARKDOWN ON 
+   <a class="label label-warning" href="http://rpubs.com/kleberperez/477939" target="_blank" role="button">RPUBS</a>
+   AND 
+   <a class="label label-success" href="https://github.com/kleberperez1/CUNY-SPS-Data607-Project3" target="_blank" role="button">GITHUB</a>
+  </p>
+  
+  <br />
+  
+  </div>
+</div>
+
+<br />
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="btn btn-default btn-block">
+  <br />
+  
+<div class="alert alert-info" role="alert">
+
+  Using verb <a class="label label-default" href="https://developer.nytimes.com/docs/books-product/1/routes/reviews.json/get" target="_blank" role="button">GET (GET /reviews.json) from NYT</a></span> 
+</div>
+</div>
+
+# <span id="maintop">Get book reviews
+
+## Get New York Times lookup book reviews.
+
+<div class="alert alert-info" role="alert">
+
+  The New York Times Developer Network page provides a rich set of APIs, as described 
+  <a class="label label-default" href="https://developer.nytimes.com/" target="_blank" role="button">here</a> 
+  <br />
+  
+  <a class="label label-default" href="https://developer.nytimes.com/get-started" target="_blank" role="button">Get started</a>
+  using the APIs in four steps: <br />
+  1. Create an Account <br />
+  2. Sign In <br />
+  3. Register apps <br />
+  4. Access the API keys <br />
+
+  The <a class="label label-default" href="https://developer.nytimes.com/apis" target="_blank" role="button">APIs</a> 
+  page has information on the different APIs. The documentation for each API includes an interactive reference for trying out the
+  API.
+
+</div> 
+</div>
+
+<br />
+
+##  In this exercise, I choose the New York Times Book Reviews API to construct an interface in R to read in the JSON data, and transform it to an R dataframe. 
+
+```{r}
+jsonFile <- "https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=jJ91v5ccDG0o0FKdjaaN8JjNk2h3iIwq"
+#isValidJSON(jsonFile)
+
+jsonR <- tbl_df(as.data.frame(fromJSON(jsonFile)))
+jsonR %>% kable() %>% 
+  kable_styling(bootstrap_options = "striped", font_size = 10) %>% 
+  scroll_box(height = "500px", width = "100%")
+
+```
+
+<br />
+
+<a href="#maintop">Go to top</a>
+
+<br /><br />
+
+* * *
+
+<br /><br />
+
+<div class="jumbotron jumbotron-fluid">
+
+## Conclusion
+
+<div class="alert alert-info" role="alert">
+
+The book reviews service lets you get NYT book review by author, ISBN, or title.
+The New York Times Book reviews API lets you get data from all New York Times Book reviews including rank history for specific reviews.
+
+</div>
+
+<div class="btn btn-default btn-block">
+
+  <p class="lead">SOURCE FILES AND RMARKDOWN ON 
+   <a class="label label-warning" href="http://rpubs.com/kleberperez/477939" target="_blank" role="button">RPUBS</a>
+   AND 
+   <a class="label label-success" href="https://github.com/kleberperez1/CUNY-SPS-Data607-Project3" target="_blank" role="button">GITHUB</a>
+  </p>
+
+</div>
+</div>
+
+<a href="#maintop">Go to top</a>
+
+<br /><br />
+
+
+* * *
+
+<br /><br />
+
+> *Please email to: * <a href="mailto:kleber.perez@live.com">Kleber Perez</a> *for any suggestion.*
+
+<footer class="border-top text-muted fixed-bottom">
+
+        DATA 607 Week 9 Assignment - MSDS 2019 Program.
+
+</footer>
+
+\textbf{Text ignored: END of other links}
+
+<br />
+<br />
+<br />
+
+
