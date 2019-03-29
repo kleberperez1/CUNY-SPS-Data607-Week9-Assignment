@@ -33,9 +33,9 @@ library(ggplot2)
   <p><a class="label label-info" href="https://www.linkedin.com/in/kleberperez/" target="_blank" role="button">KLEBER PEREZ</a></p>
   <p class="lead">DATA 607 WEEK 9 ASSIGNMENT <br />WORKING WITH NEW YORK TIMES WEB API AND JSON IN R <br />
   SOURCE FILES AND RMARKDOWN ON 
-   <a class="label label-warning" href="http://rpubs.com/kleberperez/477939" target="_blank" role="button">RPUBS</a>
+   <a class="label label-warning" href="http://rpubs.com/kleberperez/481026" target="_blank" role="button">RPUBS</a>
    AND 
-   <a class="label label-success" href="https://github.com/kleberperez1/CUNY-SPS-Data607-Project3" target="_blank" role="button">GITHUB</a>
+   <a class="label label-success" href="https://github.com/kleberperez1/CUNY-SPS-Data607-Week9-Assignment" target="_blank" role="button">GITHUB</a>
   </p>
   
   <br />
@@ -118,9 +118,9 @@ The New York Times Book reviews API lets you get data from all New York Times Bo
 <div class="btn btn-default btn-block">
 
   <p class="lead">SOURCE FILES AND RMARKDOWN ON 
-   <a class="label label-warning" href="http://rpubs.com/kleberperez/477939" target="_blank" role="button">RPUBS</a>
+   <a class="label label-warning" href="http://rpubs.com/kleberperez/481026" target="_blank" role="button">RPUBS</a>
    AND 
-   <a class="label label-success" href="https://github.com/kleberperez1/CUNY-SPS-Data607-Project3" target="_blank" role="button">GITHUB</a>
+   <a class="label label-success" href="https://github.com/kleberperez1/CUNY-SPS-Data607-Week9-Assignment" target="_blank" role="button">GITHUB</a>
   </p>
 
 </div>
